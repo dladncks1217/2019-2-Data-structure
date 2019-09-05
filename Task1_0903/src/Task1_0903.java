@@ -15,7 +15,7 @@ class Number2{
 		}
 		long end = System.currentTimeMillis();
 		System.out.println("1번문제 답 "+result1);
-		System.out.println( "실행 시간 : " + ( end - start )/1000.000000000000 );
+		System.out.println( "실행 시간 : " + ( end - start )/1000.0 );
 		
 	}
 	void number2_2(int a) {
@@ -29,7 +29,7 @@ class Number2{
 		}
 		long end = System.currentTimeMillis();
 		System.out.println("2번문제 답 "+result2);
-		System.out.println( "실행 시간 : " + ( end - start )/1000.0000000 );
+		System.out.println( "실행 시간 : " + ( end - start )/1000.0 );
 	}
 }
 public class Task1_0903 {
