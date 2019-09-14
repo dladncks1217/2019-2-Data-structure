@@ -1,5 +1,5 @@
 
-public class Task3_0903 {
+public class Task_0903_3 {
 	    static int count = 0;
 	static void move(int n,char from, char to, char tmp, int counts) {
 		

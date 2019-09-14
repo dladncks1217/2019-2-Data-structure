@@ -32,7 +32,7 @@ class Number2{
 		System.out.println( "실행 시간 : " + ( end - start )/1000.0 );
 	}
 }
-public class Task1_0903 {
+public class Task_0903_1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();

@@ -27,7 +27,7 @@ public class ArrList <E> {
     	a[k] = newItem;
     	size++;
     }
-
+    
     public E delete(int k) {  // k번째 항목 삭제
 		if (isEmpty()) throw new NoSuchElementException(); // underflow 경우에 프로그램 정지
 		E item = a[k];
@@ -38,6 +38,7 @@ public class ArrList <E> {
 			a[i] = a[i+1];  // 한 칸씩 앞으로 이동
 		}
 		size--;
+		a[size]=null;
 		if (size > 0 && size == a.length/4) // 배열에 항목들이 1/4만 차지한다면
 			resize(a.length/2); 			// 배열을 1/2 크기로 축소
 		return item;
@@ -50,8 +51,9 @@ public class ArrList <E> {
     
     private void resize(int newSize) {		// 배열 크기 조절
 		Object[] t = new Object[newSize];   // newSize 크기의 새로운 배열 t 생성
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < size; i++) {
 			t[i] = a[i];                    // 배열 s를 배열 t로 복사 
+		}
 		a = (E[]) t;                        // 배열 t를 배열 s로 
 	}
     

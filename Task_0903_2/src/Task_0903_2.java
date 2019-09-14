@@ -23,7 +23,7 @@ class Number3{
 			return Task2(a-1)+Task2(a-2);
 	}
 }
-public class Task2_0903 {
+public class Task_0903_2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
