@@ -37,18 +37,27 @@ public class Task_0910_2 {
 		while (true)
 
 		{
-			System.out.print("계수: ");
+			System.out.print("계수와 지수입력 ");
+			
 			int coef = sc.nextInt();
-
+			int expo = sc.nextInt();
+			if(coef==0) {
+				break;
+			}
+			if(coef!=0) {
+				A.insertArray(coef, expo);
+			}
 			// -1입력시 종료
 			if (coef == -1) {
 				break;
 			}
-			System.out.print("지수: ");
-			int expo = sc.nextInt();
 
-			B.insertArray(coef, expo);
-
+			if(expo==0) {
+				break;
+			}else {
+				B.insertArray(coef, expo);
+			}
+			
 		}
 
 		System.out.print("->B결과: ");

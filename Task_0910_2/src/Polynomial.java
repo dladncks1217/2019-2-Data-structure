@@ -28,14 +28,17 @@ public class Polynomial {
 			int coef = coefArray.get(i);
 			int expo = expoAraay.get(i);
 
-			// X^0ÀÎ °æ¿ì, ÀÚ¿¬¼ö¸¸ Ãâ·ÂÇÏ±â À§ÇÑ Ã³¸®
+			// X^0ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 			String isDigit = expo == 0 ? "" : "X^" + expo;
 
-			// ¸¶Áö¸· µ¡¼ÀÀ» ¾ø¾Ö±â À§ÇÑ Ã³¸®
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 			if (i == coefArray.size() - 1) {
 				System.out.print(coef + isDigit);
 				System.out.println();
 			} else {
+				if(coef==0) {
+					continue;
+				}
 				System.out.print(coef + isDigit + " + ");
 			}
 		}
