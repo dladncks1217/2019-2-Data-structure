@@ -72,15 +72,7 @@ public class BST {
 	public void delete(int data) {
 		parent = delete(parent,data); 
 	}
-	private BST delete(BST parent, int data) {
-		if(parent==null) {
-			return parent;
-		}
-		if(data<parent.data) {
-			
-		}
-		
-	}
+
 	
 	/************
 	 * Actual functions that print the tree like a tree
