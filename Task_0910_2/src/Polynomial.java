@@ -27,11 +27,11 @@ public class Polynomial {
 		for (int i = 0; i < coefArray.size(); i++) {
 			int coef = coefArray.get(i);
 			int expo = expoAraay.get(i);
-
-			// X^0�� ���, �ڿ����� ����ϱ� ���� ó��
+			
+			// X^0占쏙옙 占쏙옙占�, 占쌘울옙占쏙옙占쏙옙 占쏙옙占쏙옙歐占� 占쏙옙占쏙옙 처占쏙옙
 			String isDigit = expo == 0 ? "" : "X^" + expo;
 
-			// ������ ������ ���ֱ� ���� ó��
+			// 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쌍깍옙 占쏙옙占쏙옙 처占쏙옙
 			if (i == coefArray.size() - 1) {
 				System.out.print(coef + isDigit);
 				System.out.println();
