@@ -26,7 +26,7 @@ public class ArrList <E> {
     public E delete(int k) {  // k번째 항목 삭제
       if (isEmpty()) throw new NoSuchElementException(); // underflow 경우에 프로그램 정지
       E item = a[k];
-      for (int i = k; i < size-1; i++) { 
+      for (int i = k; i < size-1; i++) {  // 그냥 맨뒤에 한칸 비워둠
          a[i] = a[i+1];  // 한 칸씩 앞으로 이동
          a[i+1] = null; // 맨 뒤 내용 정리
       }
