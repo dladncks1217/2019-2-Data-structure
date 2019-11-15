@@ -1,7 +1,14 @@
+
 import java.lang.Comparable;
 public class Quick {
+	public static int move = 0;
+	public static int compare = 0;
     public static void sort(Comparable[] a) {
          sort(a, 0, a.length - 1);
+    }
+    static void result() {
+    	System.out.println(move+"만큼 이동");
+    	System.out.println(compare+"만큼 비교");
     }
     private static void sort(Comparable[] a, int low, int high) { 
         if (high <= low) return;
@@ -17,18 +24,21 @@ public class Quick {
             while (i < high  && isless(a[i], p)) i++; //피벗보다 작으면 i++
             while (j > pivot && isless(p, a[j])) j--; //피벗보다 크면    j--
             if (i >= j) break;  // i와 j가 교차되면 루프 나가기
+            compare++;
             swap(a, i, j); 
         }
         swap(a, pivot, j); // 피벗과 a[j] 교환
         return j;          //a[j]의 피벗이 "영원히" 자리 잡은 곳
     }
     private static boolean isless(Comparable u, Comparable v) {
+    	compare++;
         return (u.compareTo(v) < 0);
     }
     private static void swap(Comparable [] a, int i, int j) {
     	Comparable temp = a[i];
         a[i] = a[j];
         a[j] = temp;
+        move++;
     }
 }
   

@@ -163,6 +163,11 @@ public class Bst1 {
 		currSpaceCount = ele.drawPos + numDigits / 2;
 	}
 
+	public void delete(String d) {
+		if(left==null&&right==null) {
+			
+		}
+	}
 	// Utility functions
 	public void inOrderInteger(String sep) {
 		if (left != null)
